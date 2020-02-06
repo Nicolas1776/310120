@@ -1,5 +1,3 @@
-package calcs;
-
 public class Calculator {
 
     double i;
