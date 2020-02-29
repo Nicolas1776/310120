@@ -13,50 +13,40 @@ public class CalculatorWithCounter {
         this.itog2=itog;
     }
 
-    public int plus(int a, int b) {
+
+    public double plus(double a, double b) {
         if (null != itog) {
-            setCountOperation(Count);
-            return itog.plus(a, b);
+            return CalculatorWithOperator.plus(a, b);
         } else if (null != itog2) {
-            setCountOperation(Count);
-            return itog2.plus(a, b);
+            return CalculatorWithMath.plus(a, b);
         }
         return 0;
     }
-    public int minus(int a, int b) {
+    public double minus(double a, double b) {
         if (null != itog) {
-            setCountOperation(Count);
-            return itog.minus(a, b);
+            return CalculatorWithOperator.minus(a, b);
         } else if (null != itog2) {
-            setCountOperation(Count);
-            return itog2.minus(a, b);
+            return CalculatorWithMath.minus(a, b);
         }
         return 0;
     }
-    public int multiple(int a, int b) {
+    public double multiple(double a, double b) {
         if (null != itog) {
-            setCountOperation(Count);
-            return itog.multiple(a, b);
+            return CalculatorWithOperator.multiple(a, b);
         } else if (null != itog2) {
-            setCountOperation(Count);
-            return itog2.multiple(a, b);
+            return CalculatorWithMath.multiple(a, b);
         }
         return 0;
     }
-    public double divide(float a, float b) {
+    public double divide(double a, double b) {
         if (null != itog) {
-            setCountOperation(Count);
-            return itog.divide(a, b);
+            return CalculatorWithOperator.divide(a, b);
         } else if (null != itog2) {
-            setCountOperation(Count);
-            return itog2.divide(a, b);
+            return CalculatorWithMath.divide(a, b);
         }
         return 0;
     }
 
-    public void setCountOperation (int Count){
-        this.Count=Count+1;
-    }
     public int getCountOperation () {
         return Count;
     }
